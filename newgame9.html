@@ -47,12 +47,15 @@
             align-items: flex-start; /* Aligns at the top */
         }
         .centered-image {
+            width: 640px; /* Fixed width */
+            height: 1067px; /* Fixed height */
             margin-top: 20px; /* Optional: Adds some spacing from the top */
+            object-fit: cover; /* Ensures the image fits the dimensions without stretching */
         }
     </style>
 </head>
 <body>
-    <!-- Image Centered Horizontally at the Top -->
+    <!-- Image Centered Horizontally at the Top with Fixed Size -->
     <img src="https://raw.githubusercontent.com/furboladmin/snippets/main/Landing.png" alt="Furbol Landing Image" class="centered-image">
 
 </body>
