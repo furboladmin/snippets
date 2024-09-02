@@ -34,27 +34,26 @@
     <!-- iOS Smart App Banner Meta Tag -->
     <meta name="apple-itunes-app" content="app-id=6443533883, app-argument: furbol://game?id=1234">
 
-    <!-- Styles for Responsive Image -->
+    <!-- Styles for Centered Image and Background Color -->
     <style>
         body, html {
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
+            background-color: #101523; /* Background color */
             display: flex;
-            justify-content: flex-start; /* Aligns image at the top */
-            align-items: center;
-            flex-direction: column; /* Stacks items vertically */
+            justify-content: center; /* Centers horizontally */
+            align-items: flex-start; /* Aligns at the top */
         }
-        .responsive-image {
-            width: 100%;
-            height: auto; /* Maintains aspect ratio */
+        .centered-image {
+            margin-top: 20px; /* Optional: Adds some spacing from the top */
         }
     </style>
 </head>
 <body>
-    <!-- Responsive Image at the Top -->
-    <img src="https://raw.githubusercontent.com/furboladmin/snippets/main/Landing.png" alt="Furbol Landing Image" class="responsive-image">
+    <!-- Image Centered Horizontally at the Top -->
+    <img src="https://raw.githubusercontent.com/furboladmin/snippets/main/Landing.png" alt="Furbol Landing Image" class="centered-image">
 
 </body>
 </html>
