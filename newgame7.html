@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽ Futbol-7 🗓VIE-15-AUG 22:00 📍EL POLI 💰5.000</title>
+
+    <!-- Meta Tags Open Graph for Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="⚽ Futbol-7 🗓VIE-15-AUG 22:00 📍EL POLI 💰5.000">
+    <meta property="og:description" content="A MARTINFUT le Faltan 2!">
+    <meta property="og:image" content="https://raw.githubusercontent.com/furboladmin/snippets/main/roster5.png">
+    <meta property="og:image:width" content="640">
+    <meta property="og:image:height" content="640">
+    <meta property="og:url" content="https://furboladmin.github.io/snippets/newgame.html">
+    <meta property="og:site_name" content="Furbol">
+
+    <!-- Meta Tags for Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="⚽ Futbol-7 🗓VIE-15-AUG 22:00 📍EL POLI 💰5.000">
+    <meta property="twitter:description" content="A MARTINFUT le Faltan 2!">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/furboladmin/snippets/main/roster5.png">
+    <meta property="twitter:site" content="@furbolapp">
+
+    <!-- App Links Meta Tags -->
+    <meta property="al:ios:app_store_id" content="6443533883">
+    <meta property="al:ios:app_name" content="Furbol">
+    <meta property="al:ios:url" content="furbol://game?id=1234">
+
+    <meta property="al:android:url" content="furbol://game?id=1234">
+    <meta property="al:android:app_name" content="Furbol">
+    <meta property="al:android:package" content="app.furbol">
+
+    <!-- iOS Smart App Banner Meta Tag -->
+    <meta name="apple-itunes-app" content="app-id=6443533883, app-argument: furbol://game?id=1234">
+
+    <!-- Favicon and Stylesheets -->
+    <link rel="icon" type="image/svg+xml" href="https://furboladmin.github.io/img/website_icon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://furboladmin.github.io/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://furboladmin.github.io/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://furboladmin.github.io/img/favicon-16x16.png">
+
+    <!-- Include CSS for Styling -->
+    <link href="https://furboladmin.github.io/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://furboladmin.github.io/css/furbol.css" rel="stylesheet" media="screen">
+
+    <!-- Script for Theme Handling -->
+    <script>
+        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && document.documentElement && document.documentElement.classList && document.documentElement.classList.add('theme_dark');
+    </script>
+</head>
+<body class="no_transition">
+    <div class="furbol_background_wrap">
+        <canvas id="furbol_background" class="furbol_background default" width="50" height="50"></canvas>
+        <div class="furbol_background_pattern default"></div>
+    </div>
+    <div class="furbol_page_wrap">
+        <div class="furbol_head_wrap">
+            <div class="furbol_head">
+                <a href="https://furbol.app" class="furbol_head_brand">
+                    <img src="https://furboladmin.github.io/img/furbol_logo.svg" alt="Furbol Logo" height="34" width="133">
+                </a>
+                <a class="furbol_head_right_btn" href="https://furbol.app/download">
+                    Download
+                </a>
+            </div>
+        </div>
+        <div class="furbol_body_wrap">
+            <div class="furbol_page">
+                <div class="furbol_page_photo">
+                    <a href="furbol://game?id=1234"><img class="furbol_page_photo_image" src="https://raw.githubusercontent.com/furboladmin/snippets/main/roster5.png" alt="Furbol Game Roster"></a>
+                </div>
+                <div class="furbol_page_title"><span>⚽ Futbol-7 🗓VIE-15-AUG 22:00 📍EL POLI 💰5.000</span></div>
+                <div class="furbol_page_extra">
+                    A MARTINFUT le Faltan 2!
+                </div>
+                <div class="furbol_page_action">
+                    <a class="furbol_action_button shine" href="furbol://game?id=1234">Join Game</a>
+                </div>
+                <div class="furbol_page_additional">
+                    If you have <strong>Furbol</strong>, you can join the game right away.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="furbol_frame_cont"></div>
+
+    <!-- Scripts for Additional Functionality -->
+    <script src="https://furboladmin.github.io/js/furbol.min.js"></script>
+    <script>
+        var protoUrl = "furbol://game?id=1234";
+        if (protoUrl) {
+            setTimeout(function() {
+                window.location = protoUrl;
+            }, 100);
+        }
+
+        var furbol_bg = document.getElementById('furbol_background');
+        if (furbol_bg) {
+            TWallpaper.init(furbol_bg);
+            TWallpaper.animate(true);
+            window.onfocus = function() { TWallpaper.update(); };
+        }
+        document.body.classList.remove('no_transition');
+
+        function toggleTheme(dark) {
+            document.documentElement.classList.toggle('theme_dark', dark);
+            window.Furbol && Furbol.setWidgetOptions({dark: dark});
+        }
+        if (window.matchMedia) {
+            var darkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+            toggleTheme(darkMedia.matches);
+            darkMedia.addListener(function(e) {
+                toggleTheme(e.matches);
+            });
+        }
+    </script>
+</body>
+</html>
